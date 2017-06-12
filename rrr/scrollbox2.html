@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<body>
+<div style="height:820px; width:1220px;border:2px solid #ccc;font:16px/26px Georgia ;overflow:auto;">
+  <h1>HEAD SCRIPT</h1>
+  <xmp>
+function open_Calc(mypage,myname,w,h,features) {
+  var winl = (screen.width-w)/1.05;
+  var wint = (screen.height-h)/1.55;
+  if (winl < 0) winl = 0;
+  if (wint < 0) wint = 0;
+  var settings = 'height=' + h + ',';
+  settings += 'width=' + w + ',';
+  settings += 'top=' + wint + ',';
+  settings += 'left=' + winl + ',';
+  settings += features;
+  win = window.open(mypage,myname,settings);
+  win.window.focus();
+}
+
+function what(dir) {
+if (event.button == 2) { Help(dir) }
+}
+function Help(dir) {
+  var ex;
+  if (dir == 'eq') { ex = ' = : Equals\n\n Calculeaza rezultatul ecuatiei.' }
+  else if (dir == '/') { ex = ' ÷ : Division\n\n Imparte un numar la altul .\n\n\ i.e.: 8 / 2 = 4' }
+  else if (dir == 'x') { ex = ' x : Multiplication\n\n Inmulteste doua numere.\n\n\ i.e.: 2 x 4 = 8' }
+  else if (dir == '+') { ex = ' + : Addition\n\n Aduna doua numere.\n\n\ i.e.: 3 + 4 = 7' }
+  else if (dir == '-') { ex = ' - : Subtraction\n\n Scade un numar din altul.\n\n\ i.e.: 7 - 4 = 3' }
+  else if (dir == '%') { ex = ' % : Percent\n\n Afiseaza procentajul  unui numar.  }
+  else if (dir == '.') { ex = ' . : Decimal\n\n Adauga punctul decimal.' }
+  else if (dir == '1') { ex = ' 1 : Number 1\n\n Afiseaza pe display 1.' }
+  else if (dir == '2') { ex = ' 2 : Number 2\n\n Afiseaza pe display 2.' }
+  else if (dir == '3') { ex = ' 3 : Number 3\n\n Afiseaza pe display 3.' }
+  else if (dir == '4') { ex = ' 4 : Number 4\n\n Afiseaza pe display 4.' }
+  else if (dir == '5') { ex = ' 5 : Number 5\n\n Afiseaza pe display 5.' }
+  else if (dir == '6') { ex = ' 6 : Number 6\n\n Afiseaza pe display 6.' }
+  else if (dir == '7') { ex = ' 7 : Number 7\n\n Afiseaza pe display 7.' }
+  else if (dir == '8') { ex = ' 8 : Number 8\n\n Afiseaza pe display 8.' }
+  else if (dir == '9') { ex = ' 9 : Number 9\n\n Afiseaza pe display 9.' }
+  else if (dir == '0') { ex = ' 0 : Zero\n\n Plaseaza 0 pe display.' }
+  else if (dir == 'DZ') { ex = ' 00 : Double Zero\n\n Adauga doua zerouri la numar.' }
+  else if (dir == 'c') { ex = ' C : Clear\n\n\n Clear dupa fiecare ecuatie.' }
+  else if (dir == 'Del') { ex = ' Del : Delete\n\n Sterge fiecare cifra introdusa.' }
+  else if (dir == 'M') { ex = ' M : Memory \n\n Copiaza numarul din display in memorie.' }
+  else if (dir == 'RM') { ex = ' RM : Recall Memory\n\n Preia numarul din memorie si il plaseaza pe display.' }
+  else if (dir == 'M+') { ex = ' M+ : Memory Add\n\n Adauga numarul din display la memorie.' }
+  else if (dir == 'M-') { ex = ' M- : Memory Subtract\n\n Scade numarul din display din memorie.' }
+  else if (dir == 'MC') { ex = ' MC : Memory Clear \n\n Sterge numarul stocat in memorie.' }
+  else if (dir == 'NW') { ex = ' New Window : \n\n Deschide o fereastra ce contine calculatorul.' }
+  else if (dir == 'H') { ex = ' \n'
+}
+
+alert(ex);
+}
+
+}</xmp>
+
+<h1>BODY SCRIPT</h1>
+<xmp>var mem = '0';
+
+function calc() {
+  document.calculator.display.value= eval(document.calculator.display.value);
+  return true
+}
+function perc() {
+  document.calculator.display.value= eval(document.calculator.display.value)/100;
+  return true
+}
+function deleteChar() {
+  document.calculator.display.value = document.calculator.display.value.substring(0, document.calculator.display.value.length - 1)
+}
+function Clear() {
+  currentoperation=""; }</xmp>
+  
+</div></body>

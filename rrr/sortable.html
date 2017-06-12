@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=Windows-1252">
+    <link rel="stylesheet" type="text/css" href="sortable.css" /> 
+    <script src="C:\Users\Sorin\Desktop\tehnici\rrr\sortable.js">
+    </script>
+   
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sort_table(people, 0, asc1); asc1 *= -1; asc2 = 1; asc3 = 1;">Name</th>
+                <th onclick="sort_table(people, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Surname</th>
+                <th onclick="sort_table(people, 2, asc3); asc3 *= -1; asc1 = 1; asc2 = 1;">Age</th>
+            </tr>
+        </thead>
+        <tbody id="people">
+            <tr>
+                <td>Doru</td>
+                <td>Mihai</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Dan</td>
+                <td>Radu</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Vlad</td>
+                <td>Razvan</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Tudor</td>
+                <td>Andreea</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>Inescu</td>
+                <td>Paul</td>
+                <td>27</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

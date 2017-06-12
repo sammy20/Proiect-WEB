@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<body>
+<div style="height:820px; width:1220px;border:2px solid #ccc;font:16px/26px Georgia ;overflow:auto;">
+ <xmp> 
+<html>
+<head>
+<title>Page Title</title>
+
+<script src="calculator1.js"></script>
+</head>
+<body>
+<script src="calculator2.js"></script>
+
+
+<table width="20%" cellpadding="1" bgcolor="#999999" border="2" bordercolordark="#333399" bordercolorlight="#0033FF">
+
+<td valign=top align=center>
+
+<table style="border: 1px solid ivory">
+
+<form name="calculator">
+
+<td><center>
+<font face="Verdana, Helvetica, Sans-serif">
+
+</td>
+</tr>
+<tr><td><input style="font-size: 12px;color=000000;background=cccccc;" type="text" value="" name="display" value="input" size="24"><br>
+</td></tr>
+
+</table></style>
+
+<table bgcolor="#8b8b83" border="1" bordercolordark="#EEEEE0" bordercolorlight="#FFFFF0">
+<tr>
+<td><input style="font-size:12pt; height: 24px; width: 24px"  type="button" value="7"
+style="cursor:pointer;cursor:hand"onmousedown=what('7');
+onmouseup="calculator.display.value+='7';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="8"
+style="cursor:pointer;cursor:hand"onmousedown=what('8');
+onmouseup="calculator.display.value+='8';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="9"
+style="cursor:pointer;cursor:hand"onmousedown=what('9');
+onmouseup="calculator.display.value+='9';" ></td>
+
+<td><input style="font-size:13pt; height: 24px; width: 38px;color=ffffff;background=999999;" type="button" value="x"
+style="cursor:pointer;cursor:hand"onmousedown=what('x');
+onclick="calculator.display.value+='*';"></td>
+</tr>
+
+<tr>
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="4"
+style="cursor:pointer;cursor:hand"onmousedown=what('4');
+onmouseup="calculator.display.value+='4';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="5"
+style="cursor:pointer;cursor:hand"onmousedown=what('5');
+onmouseup="calculator.display.value+='5';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="6"
+style="cursor:pointer;cursor:hand"onmousedown=what('6');
+onmouseup="calculator.display.value+='6';"></td>
+
+<td><input style="font-size:14pt; height: 24px; width: 38px;color=ffffff;background=999999;" type="button" value="÷"
+style="cursor:pointer;cursor:hand"onmousedown=what('/');
+onclick="calculator.display.value+='/';"></td>
+</tr>
+
+<tr>
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="1"
+style="cursor:pointer;cursor:hand"onmousedown=what('1');
+onmouseup="calculator.display.value+='1';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="2"
+style="cursor:pointer;cursor:hand"onmousedown=what('2');
+onmouseup="calculator.display.value+='2';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="3"
+style="cursor:pointer;cursor:hand"onmousedown=what('3');
+onmouseup="calculator.display.value+='3';"></td>
+
+<td><input style="font-size:14pt; height: 24px; width: 38px;color=ffffff;background=999999;" type="button" value="-"
+style="cursor:pointer;cursor:hand"onmousedown=what('-');
+onclick="calculator.display.value+='-';"></td>
+</tr>
+
+<tr>
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="0"
+style="cursor:pointer;cursor:hand"onmousedown=what('0');
+onmouseup="calculator.display.value+='0';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="00"
+style="cursor:pointer;cursor:hand"onmousedown=what('DZ');
+onmouseup="calculator.display.value+='00';"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px" type="button" value="•"
+style="cursor:pointer;cursor:hand"onmousedown=what('.');
+onclick="calculator.display.value+='.';"></td>
+
+<td><input style="font-size:14pt; height: 24px; width: 38px;color=ffffff;background=999999;" type="button" value="+"
+style="cursor:pointer;cursor:hand"onmousedown=what('+');
+onclick="calculator.display.value+='+';"></td>
+</tr>
+
+<tr>
+<td><input style="font-size:10pt; height: 24px; width: 24px;color=ffffff;background=999999;" type="button" value="%"
+style="cursor:pointer;cursor:hand"onmousedown=what('%');
+onclick="perc()"></td>
+
+<td><input style="font-size:7pt; height: 24px; width: 24px;color=ffffff;background=999999;" type="button" value="Del"
+style="cursor:pointer;cursor:hand"onmousedown=what('Del');
+onmouseup="deleteChar(calculator.display.value)"></td>
+
+<td><input style="font-size:12pt; height: 24px; width: 24px;color=000000;background=eead0e;" type="button" value="C"
+style="cursor:pointer;cursor:hand"onmousedown=what('c');
+onclick="calculator.display.value='';"></td>
+
+<td><input style="font-size:14pt; height: 24px; width: 38px;color=ffffff;background=999999;" type="button" value="="
+style="cursor:pointer;cursor:hand"onmousedown=what('eq');
+onclick="calc()"></td>
+
+</tr>
+</table>
+
+<center>
+
+<table width="20%" cellpadding="0" bgcolor="#228B22" border="1">
+
+<td><input style="font-size:9pt; height: 20px; width: 20px;color=ffffff;background=228B22;" type="button" value="M"
+style="cursor:pointer;cursor:hand"onmousedown=what('M');
+onclick="mem.value=calculator.display.value;"></td>
+
+<td><input style="font-size:9pt; height: 20px; width: 22px;color=ffffff;background=228B22;" type="button" value="M+"
+style="cursor:pointer;cursor:hand"onmousedown=what('M+');
+onmouseup="mem.value=eval(mem.value)+eval(calculator.display.value);"></td>
+
+<td><input style="font-size:9pt; height: 20px; width: 21px;color=ffffff;background=228B22;" type="button" value="M-"
+style="cursor:pointer;cursor:hand"onmousedown=what('M-');
+onmouseup="mem.value=eval(mem.value)-eval(calculator.display.value);"></td>
+
+<td><input style="font-size:9pt; height: 20px; width: 25px;color=ffffff;background=228B22;" type="button" value="MR"
+style="cursor:pointer;cursor:hand"onmousedown=what('MR');
+onclick="calculator.display.value=calculator.display.value+'('+(mem.value)+')'"></td>
+
+<td><input style="font-size:9pt; height: 20px; width: 25px;color=000000;background=eead0e;" type="button" value="MC"
+style="cursor:pointer;cursor:hand"onmousedown=what('MC');
+onclick="mem.value='0';"></td>
+
+</tr>
+</table>
+
+<center>
+<TABLE BORDER=0>
+<form name="mem">
+
+
+
+
+</body>
+</html>
+  </xmp>
+</div></body>
